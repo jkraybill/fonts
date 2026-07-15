@@ -153,31 +153,58 @@ function setSize() {
   document.getElementById('sizev').textContent = v;
   stage.style.fontSize = v + 'px';
 }
-function setFace() {
+const NOTES = {
+  static_: 'Statics carry the full 16-way texture cycle — type a '
+    + 'run of one letter and watch the hands change.',
+  vf: 'The lean VF trades texture cycling for one small file — '
+    + 'repeats match by design; grab Full or the statics for the cycle.',
+  vffull: 'Variable Full cycles four hands per letter while the '
+    + 'axes stay live.'
+};
+let loadSeq = 0;
+async function setFace() {
   const f = document.getElementById('face').value;
-  const calt = document.getElementById('calt').checked ? '"calt" 1' : '"calt" 0';
+  const calt = document.getElementById('calt').checked
+    ? '"calt" 1' : '"calt" 0';
   const axes = document.getElementById('axes');
   const note = document.getElementById('facenote');
   stage.style.fontFeatureSettings = calt;
-  if (f === 'vf' || f === 'vffull') {
+
+  const isVF = (f === 'vf' || f === 'vffull');
+  const fam = isVF ? (f === 'vf' ? 'KOldVF' : 'KOldVFFull') : 'KOld';
+  const weight = (!isVF && f.includes('700')) ? '700' : '400';
+  const style = (!isVF && f.endsWith('i')) ? 'italic' : 'normal';
+
+  // no-FOUT face switch: keep the CURRENT face rendered until the
+  // target face has actually loaded — the lazy fetch otherwise
+  // paints the stage in fallback serif for the duration
+  const spec = `${style} ${weight} 24px ${fam}`;
+  const seq = ++loadSeq;
+  if (!document.fonts.check(spec)) {
+    note.textContent = 'loading face\u2026';
+    try { await document.fonts.load(spec, stage.textContent || 'n'); }
+    catch (e) { /* fall through — better a flash than a dead stage */ }
+    if (seq !== loadSeq) return;   // superseded by a newer pick
+  }
+
+  if (isVF) {
     axes.classList.add('on');
     const w = document.getElementById('wght').value;
     const o = document.getElementById('opsz').value;
     document.getElementById('wghtv').textContent = w;
     document.getElementById('opszv').textContent = o;
-    stage.style.fontFamily = (f === 'vf' ? "'KOldVF', serif" : "'KOldVFFull', serif");
-    stage.style.fontStyle = 'normal'; stage.style.fontWeight = 'normal';
+    stage.style.fontFamily = `'${fam}', serif`;
+    stage.style.fontStyle = 'normal';
+    stage.style.fontWeight = 'normal';
     stage.style.fontVariationSettings = `"wght" ${w}, "opsz" ${o}`;
-    note.textContent = f === 'vf'
-      ? 'The lean VF trades texture cycling for one small file — repeats match by design; grab Full or the statics for the cycle.'
-      : 'Variable Full cycles four hands per letter while the axes stay live.';
+    note.textContent = NOTES[f];
   } else {
     axes.classList.remove('on');
     stage.style.fontFamily = "'KOld', serif";
     stage.style.fontVariationSettings = '';
-    stage.style.fontWeight = f.includes('700') ? '700' : '400';
-    stage.style.fontStyle = f.endsWith('i') ? 'italic' : 'normal';
-    note.textContent = 'Statics carry the full 16-way texture cycle — type a run of one letter and watch the hands change.';
+    stage.style.fontWeight = weight;
+    stage.style.fontStyle = style;
+    note.textContent = NOTES.static_;
   }
 }
 setFace();
