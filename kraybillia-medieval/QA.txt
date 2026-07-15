@@ -1,0 +1,117 @@
+Copyright (c) 2026, Jeremy Kraybill (https://github.com/jkraybill), with Reserved Font Name Kraybillia.
+Licensed under the SIL Open Font License, Version 1.1 — see OFL.txt.
+
+Kraybillia Medieval 1.000 — released 2026-07-15 from 0829464
+
+=== fontspector ===
+  SKIP: 188 INFO: 8 PASS: 252 WARN: 13 FAIL: 0 FATAL: 0 ERROR: 0
+
+=== fontspector (VF tiers) ===
+KraybilliaMedievalVF.ttf:   SKIP: 28 INFO: 2 PASS: 83 WARN: 15 FAIL: 1 FATAL: 0 ERROR: 0 (allowed: ['unsupported-ital'])
+
+=== qa.run ===
+
+=== KraybilliaMedieval-Regular.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 1.5% (tol 6%)
+  PASS  kern_fires: AV kerns 93 units
+  PASS  calt_cycles: no variants declared
+  PASS  tnum_tabular: all digit advances 460 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.326)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 940/330 covers bbox 909/-315
+  PASS  name_rules: 'Kraybillia Medieval Regular' (27 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 23 hand kerns, largest value-group 6
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 125 KB, 603 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (67 KB over 4 tables)
+  PASS  overshoots: top +1, bottom -4 units (round vs flat ink reach)
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaMedieval-Bold.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 1.1% (tol 6%)
+  PASS  kern_fires: AV kerns 94 units
+  PASS  calt_cycles: no variants declared
+  PASS  tnum_tabular: all digit advances 476 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.356)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 940/330 covers bbox 935/-320
+  PASS  name_rules: 'Kraybillia Medieval Bold' (24 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 23 hand kerns, largest value-group 6
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 120 KB, 603 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  PASS  overshoots: top +1, bottom -4 units (round vs flat ink reach)
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaMedieval-Italic.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 1.6% (tol 6%)
+  PASS  kern_fires: AV kerns 105 units
+  PASS  calt_cycles: no variants declared
+  PASS  tnum_tabular: all digit advances 460 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.317)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 940/330 covers bbox 909/-315
+  PASS  name_rules: 'Kraybillia Medieval Italic' (26 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 23 hand kerns, largest value-group 6
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 127 KB, 603 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  PASS  overshoots: top +1, bottom -4 units (round vs flat ink reach)
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaMedieval-BoldItalic.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 0.0% (tol 6%)
+  PASS  kern_fires: AV kerns 106 units
+  PASS  calt_cycles: no variants declared
+  PASS  tnum_tabular: all digit advances 476 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.346)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 940/330 covers bbox 935/-319
+  PASS  name_rules: 'Kraybillia Medieval Bold Italic' (31 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 23 hand kerns, largest value-group 6
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 121 KB, 603 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  PASS  overshoots: top +1, bottom -4 units (round vs flat ink reach)
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== family: kraybillia/kraybillia-medieval ===
+  PASS  family_metrics: 9 metric fields identical across 4 styles
+  PASS  vf_specks: worst vs static: 'n' +4 px
+  PASS  vf_counters: counters intact across ['e', 'g', 'o', '&']
+  PASS  vf_weight_axis: wght carries weight (1.14x at 700.0)
+  PASS  vf_shape_match: VF default within 0.7% of static
+  PASS  vf_ital_axis: ital=1 leans with static Italic (-0.149 vs -0.150, upright -0.029)
+

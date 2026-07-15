@@ -1,0 +1,30 @@
+FONTLOG for Kraybillia Medieval
+===============================
+
+This file provides detailed information on the Kraybillia Medieval font
+software. This information should be distributed along with
+the Kraybillia Medieval fonts and any derivative works.
+
+Basic Font Information
+----------------------
+Kraybillia Medieval is a hand-daubed display family: every glyph is
+drawn by a seeded parametric pen, with contextual alternates
+cycling multiple independent renders of each letter. Full
+Google Fonts Latin Core coverage (EN/RO/VI at the heart,
+plus CE, Baltic, Turkish, Welsh, Icelandic).
+
+ChangeLog
+---------
+2026-07-15 (Kraybillia Medieval) Version 1.000
+- Released from commit 0829464; see the QA certificate
+  (QA.txt) for the gate battery this release passed.
+
+Acknowledgements
+----------------
+N: Jeremy Kraybill
+W: https://github.com/jkraybill
+D: Copyright holder, designer, foundry
+
+N: Gordo
+W: https://github.com/gordo-ai
+D: Designer, engineering, parametric pen
