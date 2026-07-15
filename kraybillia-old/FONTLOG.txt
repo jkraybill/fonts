@@ -22,9 +22,9 @@ ChangeLog
 Acknowledgements
 ----------------
 N: Jeremy Kraybill
-E: https://github.com/jkraybill
+W: https://github.com/jkraybill
 D: Copyright holder, designer, foundry
 
 N: Gordo
-E: https://github.com/gordo-ai
+W: https://github.com/gordo-ai
 D: Designer, engineering, parametric pen
