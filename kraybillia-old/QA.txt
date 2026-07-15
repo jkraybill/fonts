@@ -1,0 +1,114 @@
+Kraybillia Old 1.100 — released 2026-07-15 from 8ba9420
+
+=== fontspector ===
+  SKIP: 188 INFO: 6 PASS: 251 WARN: 16 FAIL: 0 FATAL: 0 ERROR: 0
+
+=== fontspector (VF tiers) ===
+KraybilliaOldVF.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 1494 FAIL: 0 FATAL: 0 ERROR: 0
+KraybilliaOldVFFull.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 6015 FAIL: 1 FATAL: 0 ERROR: 0 (allowed: ['massive-font'])
+
+=== qa.run ===
+
+=== KraybilliaOld-Regular.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 2.7% (tol 6%)
+  PASS  kern_fires: AV kerns 69 units
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  tnum_tabular: all digit advances 388 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.243)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 945/265 covers bbox 896/-237
+  PASS  name_rules: 'Kraybillia Old Regular' (22 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 10 hand kerns, largest value-group 4
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 3202 KB, 6933 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (67 KB over 4 tables)
+  WARN  overshoots: top +10, bottom -13 units (round vs flat ink reach) — rounds fall short of flats
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaOld-Bold.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 2.2% (tol 6%)
+  PASS  kern_fires: AV kerns 53 units
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  tnum_tabular: all digit advances 406 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.311)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 945/265 covers bbox 933/-248
+  PASS  name_rules: 'Kraybillia Old Bold' (19 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 10 hand kerns, largest value-group 4
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 2651 KB, 6933 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  WARN  overshoots: top +8, bottom -18 units (round vs flat ink reach) — rounds fall short of flats
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaOld-Italic.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 1.2% (tol 6%)
+  PASS  kern_fires: AV kerns 80 units
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  tnum_tabular: all digit advances 388 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.243)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 945/265 covers bbox 898/-237
+  PASS  name_rules: 'Kraybillia Old Italic' (21 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 10 hand kerns, largest value-group 4
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 3218 KB, 6933 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  WARN  overshoots: top +12, bottom -14 units (round vs flat ink reach) — rounds fall short of flats
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== KraybilliaOld-BoldItalic.otf ===
+  PASS  charset_profiles: 270 required chars covered
+  PASS  spacing_rhythm: max interval deviation 2.2% (tol 6%)
+  PASS  kern_fires: AV kerns 67 units
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  tnum_tabular: all digit advances 406 with tnum (kern-free)
+  PASS  case_raises: case raises hyphen by 110 units
+  PASS  frac_works: frac substitutes numr/fraction/dnom
+  PASS  danger_collisions: 16 danger pairs clear
+  PASS  weight_consistency: 52 glyphs within color band (median 0.315)
+  PASS  use_typo_metrics: OS/2 v4, USE_TYPO_METRICS set
+  PASS  linegaps_zero: both linegaps 0
+  PASS  win_metrics_cover_ink: win 945/265 covers bbox 932/-249
+  PASS  name_rules: 'Kraybillia Old Bold Italic' (26 chars)
+  PASS  coverage_gf_latin_core: full GF Latin Core (319 codepoints)
+  PASS  micro_contours: no contours under 12 units
+  PASS  outer_winding: outer winding correct across 419 glyphs
+  PASS  kern_tripwire: 10 hand kerns, largest value-group 4
+  PASS  sidebearing_classes: 4 sidebearing classes within 8 units
+  PASS  woff2_roundtrip: woff2 2673 KB, 6933 glyphs intact
+  PASS  ttx_roundtrip: ttx dump ok (68 KB over 4 tables)
+  WARN  overshoots: top +11, bottom -20 units (round vs flat ink reach) — rounds fall short of flats
+  PASS  visual_regression: 0.000% diff vs baseline
+
+=== family: kraybillia/kraybillia-old ===
+  PASS  family_metrics: 9 metric fields identical across 4 styles
+  PASS  vf_specks: worst vs static: '&' +6 px
+  PASS  vf_counters: counters intact across ['e', 'g', 'o', '&']
+  PASS  vf_weight_axis: wght carries weight (1.34x at 700.0)
+  PASS  vf_shape_match: VF default within 0.7% of static
+
