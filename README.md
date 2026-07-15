@@ -62,5 +62,5 @@ All fonts are licensed under the
 [SIL Open Font License 1.1](https://openfontlicense.org).
 **"Kraybillia" is a Reserved Font Name.**
 
-*Built by a human–AI collaboration: JK's eye, Gordo's pen, and a
-constitution between them.*
+*Built by [jkraybill](https://github.com/jkraybill) and
+[gordo-ai](https://github.com/gordo-ai).*
