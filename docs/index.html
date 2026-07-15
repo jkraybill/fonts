@@ -38,6 +38,12 @@
                      font-size: .85rem; background: #fff;
                      color: var(--ink); }
   .controls input[type=range] { accent-color: var(--accent); }
+  .chips { display: flex; gap: .45rem; flex-wrap: wrap;
+           margin: -.2rem 0 1rem; }
+  .chip { font-size: .74rem; padding: .18rem .6rem;
+          border: 1px solid var(--line); border-radius: 1rem;
+          color: var(--muted); }
+  #loadnote { font-size: .8rem; color: var(--accent); }
   .stagewrap { position: relative; }
   #stage { width: 100%; min-height: 8.5rem; resize: vertical;
            border: 1.5px dashed #c9c9c9; border-radius: .6rem;
@@ -88,6 +94,12 @@
 
 <section class="fontcard">
   <h2>Kraybillia Old</h2>
+  <div class="chips">
+    <span class="chip">16 textures per glyph</span>
+    <span class="chip">variable sizing (2-axis)</span>
+    <span class="chip">small caps · fractions · tabular figures</span>
+    <span class="chip">419 characters</span>
+  </div>
   <div class="controls">
     <label>face
       <select id="face" onchange="setFace()">
@@ -103,6 +115,7 @@
       value="58" oninput="setSize()"> <span id="sizev">58</span>px</label>
     <label><input type="checkbox" id="calt" checked
       onchange="setFace()"> contextual alternates</label>
+    <span id="loadnote"></span>
     <span class="axes" id="axes">
       <label>wght <input type="range" id="wght" min="400" max="700"
         value="400" oninput="setFace()"> <span id="wghtv">400</span></label>
@@ -114,9 +127,6 @@
     <div id="stage" contenteditable="true" spellcheck="false">Sphinx of black quartz, judge my vow — preț fix 1,234.56</div>
     <span class="edithint" id="edithint">✎ click to edit — type anything</span>
   </div>
-  <p class="note" id="facenote">Statics carry the full 16-way texture
-  cycle — type a run of one letter and watch the hands change.</p>
-
   <h3 class="dlhead">Downloads</h3>
   <ul class="dl">
       <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Regular.otf" download>KraybilliaOld-Regular.otf</a><span>Regular · OTF · 5.9 MB</span></li>
@@ -153,21 +163,13 @@ function setSize() {
   document.getElementById('sizev').textContent = v;
   stage.style.fontSize = v + 'px';
 }
-const NOTES = {
-  static_: 'Statics carry the full 16-way texture cycle — type a '
-    + 'run of one letter and watch the hands change.',
-  vf: 'The lean VF trades texture cycling for one small file — '
-    + 'repeats match by design; grab Full or the statics for the cycle.',
-  vffull: 'Variable Full cycles four hands per letter while the '
-    + 'axes stay live.'
-};
 let loadSeq = 0;
 async function setFace() {
   const f = document.getElementById('face').value;
   const calt = document.getElementById('calt').checked
     ? '"calt" 1' : '"calt" 0';
   const axes = document.getElementById('axes');
-  const note = document.getElementById('facenote');
+  const note = document.getElementById('loadnote');
   stage.style.fontFeatureSettings = calt;
 
   const isVF = (f === 'vf' || f === 'vffull');
@@ -186,6 +188,7 @@ async function setFace() {
     catch (e) { /* fall through — better a flash than a dead stage */ }
     if (seq !== loadSeq) return;   // superseded by a newer pick
   }
+  note.textContent = '';
 
   if (isVF) {
     axes.classList.add('on');
@@ -197,14 +200,12 @@ async function setFace() {
     stage.style.fontStyle = 'normal';
     stage.style.fontWeight = 'normal';
     stage.style.fontVariationSettings = `"wght" ${w}, "opsz" ${o}`;
-    note.textContent = NOTES[f];
   } else {
     axes.classList.remove('on');
     stage.style.fontFamily = "'KOld', serif";
     stage.style.fontVariationSettings = '';
     stage.style.fontWeight = weight;
     stage.style.fontStyle = style;
-    note.textContent = NOTES.static_;
   }
 }
 setFace();
