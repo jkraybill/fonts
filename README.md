@@ -2,13 +2,13 @@
 
 Some free fonts you can use. **[Preview and download](https://jkraybill.github.io/fonts/)**
 
-## Kraybillia Old
-
-![Kraybillia Old — "So that the strong would not oppress the weak" in English, Romanian, and Vietnamese](docs/specimens/kraybillia-old-preview.png)
-
 ## Kraybillia Medieval
 
 ![Kraybillia Medieval — the same lines in blackletter](docs/specimens/kraybillia-medieval-preview.png)
+
+## Kraybillia Old
+
+![Kraybillia Old — "So that the strong would not oppress the weak" in English, Romanian, and Vietnamese](docs/specimens/kraybillia-old-preview.png)
 
 ---
 
