@@ -3,19 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kraybillia — a hand-daubed display family</title>
+<title>Fonts</title>
 <style>
-  :root {
-    --bg: #f4efe6; --ink: #2b2118; --muted: #8a7a66;
-    --card: #fbf8f2; --line: #e3dacb; --accent: #7a5c3e;
-    --warn: #a05a4a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #201b14; --ink: #ece4d6; --muted: #9c8d78;
-      --card: #2a241b; --line: #3a3327; --accent: #c9a87c;
-    }
-  }
+  :root { --ink: #1a1a1a; --muted: #666; --line: #e4e4e4;
+          --accent: #7a5c3e; }
   @font-face { font-family: 'KOld'; src: url(fonts/KraybilliaOld-Regular.woff2) format('woff2'); font-weight: 400; font-style: normal; }
   @font-face { font-family: 'KOld'; src: url(fonts/KraybilliaOld-Bold.woff2) format('woff2'); font-weight: 700; font-style: normal; }
   @font-face { font-family: 'KOld'; src: url(fonts/KraybilliaOld-Italic.woff2) format('woff2'); font-weight: 400; font-style: italic; }
@@ -24,171 +15,123 @@
   @font-face { font-family: 'KOldVFFull'; src: url(fonts/KraybilliaOldVFFull.woff2) format('woff2-variations'); font-weight: 400 700; }
 
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-         font-family: Georgia, 'Times New Roman', serif; }
-  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+  body { margin: 0; background: #fff; color: var(--ink);
+         font-family: system-ui, -apple-system, sans-serif; }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 1.5rem 4rem; }
 
-  header.hero { text-align: center; padding: 4.5rem 1rem 2.5rem; }
-  .hero h1 { font-family: 'KOld', serif; font-weight: 400;
-             font-size: clamp(3rem, 11vw, 7.5rem); margin: 0;
-             letter-spacing: .01em; }
-  .hero p.tag { color: var(--muted); font-size: 1.05rem;
-                margin: 1rem auto 0; max-width: 38rem;
-                font-style: italic; }
-  .hero .langs { font-family: 'KOld', serif; font-size: 1.5rem;
-                 margin-top: 1.6rem; line-height: 1.7;
-                 overflow-wrap: anywhere; }
+  header.top { padding: 3.2rem 0 0.6rem; }
+  header.top h1 { font-size: 2.4rem; margin: 0; letter-spacing: -.01em; }
+  header.top p { color: var(--muted); font-size: 1.05rem;
+                 margin: .5rem 0 0; max-width: 42rem; line-height: 1.55; }
 
-  section { margin-top: 3.5rem; }
-  h2 { font-size: .85rem; letter-spacing: .18em; color: var(--muted);
-       text-transform: uppercase; border-bottom: 1px solid var(--line);
-       padding-bottom: .5rem; }
-
-  .playground { background: var(--card); border: 1px solid var(--line);
-                border-radius: .8rem; padding: 1.4rem; }
-  .controls { display: flex; gap: 1.2rem; flex-wrap: wrap;
+  .fontcard { border: 1px solid var(--line); border-radius: .9rem;
+              padding: 1.5rem 1.6rem; margin-top: 2.2rem;
+              box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+  .fontcard h2 { font-family: 'KOld', serif; font-weight: 400;
+                 font-size: 3rem; margin: 0 0 .9rem; }
+  .controls { display: flex; gap: 1.1rem; flex-wrap: wrap;
               align-items: center; font-size: .85rem;
-              color: var(--muted); margin-bottom: 1rem;
-              font-family: system-ui, sans-serif; }
-  .controls label { display: flex; align-items: center; gap: .45rem; }
-  .controls select, .controls input[type=range] { accent-color: var(--accent); }
-  .controls select { background: var(--bg); color: var(--ink);
-                     border: 1px solid var(--line); border-radius: .4rem;
-                     padding: .25rem .5rem; font-size: .85rem; }
-  #stage { width: 100%; min-height: 9rem; border: none; resize: vertical;
-           background: transparent; color: var(--ink);
-           font-family: 'KOld', serif; font-size: 64px; line-height: 1.25;
-           outline: none; overflow-wrap: anywhere; }
-  .axes { display: none; gap: 1.4rem; flex-wrap: wrap; }
+              color: var(--muted); margin-bottom: .9rem; }
+  .controls label { display: flex; align-items: center; gap: .4rem; }
+  .controls select { border: 1px solid var(--line);
+                     border-radius: .4rem; padding: .3rem .5rem;
+                     font-size: .85rem; background: #fff;
+                     color: var(--ink); }
+  .controls input[type=range] { accent-color: var(--accent); }
+  .stagewrap { position: relative; }
+  #stage { width: 100%; min-height: 8.5rem; resize: vertical;
+           border: 1.5px dashed #c9c9c9; border-radius: .6rem;
+           padding: .9rem 1rem; background: #fff; color: var(--ink);
+           font-family: 'KOld', serif; font-size: 58px;
+           line-height: 1.22; outline: none;
+           overflow-wrap: anywhere; transition: border-color .15s; }
+  #stage:hover { border-color: var(--accent); }
+  #stage:focus { border: 1.5px solid var(--accent); }
+  .edithint { position: absolute; top: .55rem; right: .8rem;
+              font-size: .75rem; color: var(--muted);
+              background: #fff; padding: 0 .3rem; pointer-events: none; }
+  .axes { display: none; gap: 1.2rem; flex-wrap: wrap; }
   .axes.on { display: flex; }
-  .note { font-size: .8rem; color: var(--muted);
-          font-family: system-ui, sans-serif; margin-top: .6rem; }
+  .note { font-size: .8rem; color: var(--muted); margin-top: .55rem; }
 
-  .demo-line { font-family: 'KOld', serif; font-size: 3.2rem;
-               line-height: 1.2; overflow-wrap: anywhere; }
-  .demo-caption { font-size: .85rem; color: var(--muted);
-                  font-family: system-ui, sans-serif; }
+  h3.dlhead { font-size: .8rem; letter-spacing: .14em;
+              text-transform: uppercase; color: var(--muted);
+              margin: 1.6rem 0 .5rem; }
+  ul.dl { list-style: none; margin: 0; padding: 0;
+          columns: 2; column-gap: 2.5rem; }
+  ul.dl li { padding: .32rem 0; border-bottom: 1px solid var(--line);
+             font-size: .88rem; display: flex;
+             justify-content: space-between; gap: 1rem;
+             break-inside: avoid; }
+  ul.dl a { color: var(--accent); text-decoration: none; }
+  ul.dl a:hover { text-decoration: underline; }
+  ul.dl span { color: var(--muted); font-size: .78rem;
+               white-space: nowrap; }
 
-  .tiers { display: grid; gap: 1rem;
-           grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
-  .tier { background: var(--card); border: 1px solid var(--line);
-          border-radius: .8rem; padding: 1.1rem 1.2rem;
-          display: flex; flex-direction: column; gap: .5rem; }
-  .tier h3 { margin: 0; font-family: 'KOld', serif; font-weight: 400;
-             font-size: 1.6rem; }
-  .tier p { margin: 0; font-size: .85rem; color: var(--muted);
-            font-family: system-ui, sans-serif; flex: 1; }
-  .tier a.dl { display: inline-block; text-decoration: none;
-               border: 1px solid var(--accent); color: var(--accent);
-               border-radius: .5rem; padding: .4rem .9rem;
-               font-size: .85rem; font-family: system-ui, sans-serif;
-               width: fit-content; }
-  .tier a.dl:hover { background: var(--accent); color: var(--bg); }
-  .tier .size { font-size: .72rem; color: var(--muted);
-                font-family: system-ui, sans-serif; }
-
-  footer { margin-top: 4rem; padding-top: 1.2rem;
+  footer { margin-top: 3rem; padding-top: 1.1rem;
            border-top: 1px solid var(--line); color: var(--muted);
-           font-size: .8rem; font-family: system-ui, sans-serif;
-           line-height: 1.7; }
+           font-size: .8rem; line-height: 1.7; }
   footer a { color: var(--accent); }
+  @media (max-width: 44rem) { ul.dl { columns: 1; } }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="hero">
-  <h1>Kraybillia Old</h1>
-  <p class="tag">A hand-daubed display family. Sixteen renders of every
-  letter, cycled as you type — no two neighbours ever match. Drawn by a
-  parametric pen, finished by argument.</p>
-  <div class="langs">Muzicologă în bej — Đặng Thùy Trâm — Ćwierć
-  łżą Škoda — Þórður ð æ — £12,000 · €9,99 · ¥800</div>
+<header class="top">
+  <h1>Fonts</h1>
+  <p>Free, high-quality fonts you can use. All support 100+ Latin
+  languages (full Google Fonts Latin Core — English, Romanian,
+  Vietnamese, Central European, Baltic, Turkish, Welsh, Icelandic)
+  and variable font sizing.</p>
 </header>
 
-<section>
-  <h2>Playground</h2>
-  <div class="playground">
-    <div class="controls">
-      <label>face
-        <select id="face" onchange="setFace()">
-          <option value="s400n">Regular</option>
-          <option value="s700n">Bold</option>
-          <option value="s400i">Italic</option>
-          <option value="s700i">Bold Italic</option>
-          <option value="vf">Variable (wght·opsz)</option>
-          <option value="vffull">Variable Full (texture cycling)</option>
-        </select>
-      </label>
-      <label>size <input type="range" id="size" min="18" max="160"
-        value="64" oninput="setSize()"> <span id="sizev">64</span>px</label>
-      <label><input type="checkbox" id="calt" checked
-        onchange="setFace()"> contextual alternates</label>
-      <span class="axes" id="axes">
-        <label>wght <input type="range" id="wght" min="400" max="700"
-          value="400" oninput="setFace()"> <span id="wghtv">400</span></label>
-        <label>opsz <input type="range" id="opsz" min="12" max="72"
-          value="72" oninput="setFace()"> <span id="opszv">72</span></label>
-      </span>
-    </div>
+<section class="fontcard">
+  <h2>Kraybillia Old</h2>
+  <div class="controls">
+    <label>face
+      <select id="face" onchange="setFace()">
+        <option value="s400n">Regular</option>
+        <option value="s700n">Bold</option>
+        <option value="s400i">Italic</option>
+        <option value="s700i">Bold Italic</option>
+        <option value="vf">Variable (wght·opsz)</option>
+        <option value="vffull">Variable Full (texture cycling)</option>
+      </select>
+    </label>
+    <label>size <input type="range" id="size" min="18" max="140"
+      value="58" oninput="setSize()"> <span id="sizev">58</span>px</label>
+    <label><input type="checkbox" id="calt" checked
+      onchange="setFace()"> contextual alternates</label>
+    <span class="axes" id="axes">
+      <label>wght <input type="range" id="wght" min="400" max="700"
+        value="400" oninput="setFace()"> <span id="wghtv">400</span></label>
+      <label>opsz <input type="range" id="opsz" min="12" max="72"
+        value="72" oninput="setFace()"> <span id="opszv">72</span></label>
+    </span>
+  </div>
+  <div class="stagewrap">
     <div id="stage" contenteditable="true" spellcheck="false">Sphinx of black quartz, judge my vow — preț fix 1,234.56</div>
-    <p class="note" id="facenote">Statics carry the full 16-way texture
-    cycle — type a run of one letter and watch the hands change.</p>
+    <span class="edithint" id="edithint">✎ click to edit — type anything</span>
   </div>
-</section>
+  <p class="note" id="facenote">Statics carry the full 16-way texture
+  cycle — type a run of one letter and watch the hands change.</p>
 
-<section>
-  <h2>One letter, many hands</h2>
-  <p class="demo-line">nnnnnnnnnn minimum tenement</p>
-  <p class="demo-caption">Contextual alternates cycle sixteen
-  independent renders of each glyph (statics; the Full variable font
-  carries four). Every daub is placed by a seeded pen — texture is
-  reproducible, never rubber-stamped.</p>
-</section>
-
-<section>
-  <h2>Tiers</h2>
-  <div class="tiers">
-    <div class="tier">
-      <h3>Statics</h3>
-      <p>Regular · Bold · Italic · Bold Italic. The texture flagship:
-      16-way cycling, full kerning, OTF.</p>
-      <span class="size">four OTFs · 21 MB</span>
-      <a class="dl" href="https://github.com/jkraybill/fonts/tree/master/kraybillia-old">download</a>
-    </div>
-    <div class="tier">
-      <h3>Variable</h3>
-      <p>One lean file, wght 400–700 and optical size 12–72. The axes
-      tier — texture calms as sizes shrink.</p>
-      <span class="size">one TTF · 5.7 MB</span>
-      <a class="dl" href="https://github.com/jkraybill/fonts/tree/master/kraybillia-old">download</a>
-    </div>
-    <div class="tier">
-      <h3>Variable Full</h3>
-      <p>The axes plus real 4-way texture cycling in one variable
-      file. Desktop specialty.</p>
-      <span class="size">one TTF · 20.8 MB</span>
-      <a class="dl" href="https://github.com/jkraybill/fonts/tree/master/kraybillia-old">download</a>
-    </div>
-    <div class="tier">
-      <h3>Web</h3>
-      <p>woff2 of every tier — statics for cycling, lean VF for
-      responsive weight. This page is set in them.</p>
-      <span class="size">six woff2 · 22 MB together</span>
-      <a class="dl" href="https://github.com/jkraybill/fonts/tree/master/kraybillia-old">download</a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Coverage</h2>
-  <p style="font-family: system-ui, sans-serif; font-size: .95rem;
-     line-height: 1.7; color: var(--muted);">
-  Full Google Fonts Latin Core: English, Romanian and Vietnamese at
-  the heart (comma-below Ș ț, the complete tone-mark system), plus
-  Central European, Baltic, Turkish, Welsh, Icelandic — Æ ð Þ ß Œ ł Ħ
-  and friends drawn with the same pen, not borrowed. Tabular figures,
-  fractions, small caps, case punctuation, 419 encoded characters.</p>
+  <h3 class="dlhead">Downloads</h3>
+  <ul class="dl">
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Regular.otf" download>KraybilliaOld-Regular.otf</a><span>Regular · OTF · 5.9 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Bold.otf" download>KraybilliaOld-Bold.otf</a><span>Bold · OTF · 4.7 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Italic.otf" download>KraybilliaOld-Italic.otf</a><span>Italic · OTF · 6.0 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-BoldItalic.otf" download>KraybilliaOld-BoldItalic.otf</a><span>Bold Italic · OTF · 4.7 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOldVF.ttf" download>KraybilliaOldVF.ttf</a><span>Variable (wght·opsz) · TTF · 5.7 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOldVFFull.ttf" download>KraybilliaOldVFFull.ttf</a><span>Variable Full (texture cycling) · TTF · 20.8 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Regular.woff2" download>KraybilliaOld-Regular.woff2</a><span>Regular · WOFF2 · 3.1 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Bold.woff2" download>KraybilliaOld-Bold.woff2</a><span>Bold · WOFF2 · 2.6 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-Italic.woff2" download>KraybilliaOld-Italic.woff2</a><span>Italic · WOFF2 · 3.1 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOld-BoldItalic.woff2" download>KraybilliaOld-BoldItalic.woff2</a><span>Bold Italic · WOFF2 · 2.6 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOldVF.woff2" download>KraybilliaOldVF.woff2</a><span>Variable · WOFF2 · 2.1 MB</span></li>
+      <li><a href="https://github.com/jkraybill/fonts/raw/master/kraybillia-old/KraybilliaOldVFFull.woff2" download>KraybilliaOldVFFull.woff2</a><span>Variable Full · WOFF2 · 8.0 MB</span></li>
+  </ul>
 </section>
 
 <footer>
@@ -197,13 +140,14 @@
   Fonts are licensed under the
   <a href="https://openfontlicense.org">SIL Open Font License 1.1</a>;
   "Kraybillia" is a Reserved Font Name. Every binary carries its
-  version and the exact git commit that built it in name ID 5 —
-  provenance you can read with any font inspector.
+  version and the exact git commit that built it in name ID 5.
 </footer>
 
 </div>
 <script>
 const stage = document.getElementById('stage');
+stage.addEventListener('focus', () =>
+  document.getElementById('edithint').style.display = 'none');
 function setSize() {
   const v = document.getElementById('size').value;
   document.getElementById('sizev').textContent = v;
