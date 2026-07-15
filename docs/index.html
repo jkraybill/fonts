@@ -119,7 +119,7 @@
     </a>
   </div>
   <p>Free, high-quality fonts you can use. All support 100+ Latin
-  languages (full Google Fonts Latin Core — English, Romanian,
+  languages (full Google Fonts Latin Core, including English, Romanian,
   Vietnamese, Central European, Baltic, Turkish, Welsh, Icelandic)
   and variable font sizing.</p>
 </header>
@@ -155,7 +155,7 @@
   </div>
   <div class="stagewrap">
     <div id="stage2" contenteditable="true" spellcheck="false" class="stage" style="font-family:'KMed', serif">So that the strong would not oppress the weak.<br>Pentru ca cel puternic să nu-l asuprească pe cel slab.<br>Để kẻ mạnh không áp bức kẻ yếu.</div>
-    <span class="edithint" id="edithint2">✎ click to edit — type anything</span>
+    <span class="edithint" id="edithint2">✎ click to edit, type anything</span>
   </div>
 
   <h3 class="dlhead">Downloads</h3>
@@ -212,7 +212,7 @@
   </div>
   <div class="stagewrap">
     <div id="stage" contenteditable="true" spellcheck="false">So that the strong would not oppress the weak.<br>Pentru ca cel puternic să nu-l asuprească pe cel slab.<br>Để kẻ mạnh không áp bức kẻ yếu.</div>
-    <span class="edithint" id="edithint">✎ click to edit — type anything</span>
+    <span class="edithint" id="edithint">✎ click to edit, type anything</span>
   </div>
   <h3 class="dlhead">Downloads</h3>
   <a class="dlall"
@@ -270,14 +270,14 @@ async function setFace() {
   const style = (!isVF && f.endsWith('i')) ? 'italic' : 'normal';
 
   // no-FOUT face switch: keep the CURRENT face rendered until the
-  // target face has actually loaded — the lazy fetch otherwise
+  // target face has actually loaded; the lazy fetch otherwise
   // paints the stage in fallback serif for the duration
   const spec = `${style} ${weight} 24px ${fam}`;
   const seq = ++loadSeq;
   if (!document.fonts.check(spec)) {
     note.textContent = 'loading face\u2026';
     try { await document.fonts.load(spec, stage.textContent || 'n'); }
-    catch (e) { /* fall through — better a flash than a dead stage */ }
+    catch (e) { /* fall through; better a flash than a dead stage */ }
     if (seq !== loadSeq) return;   // superseded by a newer pick
   }
   note.textContent = '';
