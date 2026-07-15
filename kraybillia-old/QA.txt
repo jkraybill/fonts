@@ -1,4 +1,7 @@
-Kraybillia Old 1.100 — released 2026-07-15 from 8ba9420
+Copyright (c) 2026, Jeremy Kraybill (https://github.com/jkraybill), with Reserved Font Name Kraybillia.
+Licensed under the SIL Open Font License, Version 1.1 — see OFL.txt.
+
+Kraybillia Old 1.100 — released 2026-07-15 from cdce0bc
 
 === fontspector ===
   SKIP: 188 INFO: 6 PASS: 251 WARN: 16 FAIL: 0 FATAL: 0 ERROR: 0
@@ -13,7 +16,7 @@ KraybilliaOldVFFull.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 6015 FAIL: 1 FATAL: 0
   PASS  charset_profiles: 270 required chars covered
   PASS  spacing_rhythm: max interval deviation 2.7% (tol 6%)
   PASS  kern_fires: AV kerns 69 units
-  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs, 4 distinct outlines
   PASS  tnum_tabular: all digit advances 388 with tnum (kern-free)
   PASS  case_raises: case raises hyphen by 110 units
   PASS  frac_works: frac substitutes numr/fraction/dnom
@@ -37,7 +40,7 @@ KraybilliaOldVFFull.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 6015 FAIL: 1 FATAL: 0
   PASS  charset_profiles: 270 required chars covered
   PASS  spacing_rhythm: max interval deviation 2.2% (tol 6%)
   PASS  kern_fires: AV kerns 53 units
-  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs, 4 distinct outlines
   PASS  tnum_tabular: all digit advances 406 with tnum (kern-free)
   PASS  case_raises: case raises hyphen by 110 units
   PASS  frac_works: frac substitutes numr/fraction/dnom
@@ -61,7 +64,7 @@ KraybilliaOldVFFull.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 6015 FAIL: 1 FATAL: 0
   PASS  charset_profiles: 270 required chars covered
   PASS  spacing_rhythm: max interval deviation 1.2% (tol 6%)
   PASS  kern_fires: AV kerns 80 units
-  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs, 4 distinct outlines
   PASS  tnum_tabular: all digit advances 388 with tnum (kern-free)
   PASS  case_raises: case raises hyphen by 110 units
   PASS  frac_works: frac substitutes numr/fraction/dnom
@@ -85,7 +88,7 @@ KraybilliaOldVFFull.ttf:   SKIP: 28 INFO: 2 PASS: 85 WARN: 6015 FAIL: 1 FATAL: 0
   PASS  charset_profiles: 270 required chars covered
   PASS  spacing_rhythm: max interval deviation 2.2% (tol 6%)
   PASS  kern_fires: AV kerns 67 units
-  PASS  calt_cycles: aaaa -> 4 distinct glyphs
+  PASS  calt_cycles: aaaa -> 4 distinct glyphs, 4 distinct outlines
   PASS  tnum_tabular: all digit advances 406 with tnum (kern-free)
   PASS  case_raises: case raises hyphen by 110 units
   PASS  frac_works: frac substitutes numr/fraction/dnom
