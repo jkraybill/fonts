@@ -1,1 +1,4 @@
 .DS_Store
+
+# gordo-ledger index (local, rebuild: cli.js index)
+.gordo-memory/
