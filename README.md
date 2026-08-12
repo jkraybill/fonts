@@ -14,3 +14,5 @@ Some free fonts you can use. **[Preview and download](https://jkraybill.github.i
 
 Licensed under the [SIL Open Font License 1.1](https://openfontlicense.org).
 Built by [jkraybill](https://github.com/jkraybill) and [gordo-ai](https://github.com/gordo-ai).
+
+<!-- Last reviewed: 2026-08-12 22:12 AEST by Gordo -->
